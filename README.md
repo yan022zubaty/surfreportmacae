@@ -6,14 +6,18 @@ O painel Power BI apresenta a estrutura operacional do sistema e pode conter pre
 
 ## Organização
 
-- `dados/observacoes_surfreport_2026.csv`: base final de avaliação observacional (105 registros válidos; 08 a 17/11/2026; separador `;`, codificação UTF-8 com BOM).
-- `python/surfreport_noaa.py`: aquisição de previsões da Stormglass, com fonte NOAA para as variáveis ambientais e consulta separada de maré. **A chave de API foi substituída por texto de configuração.**
-- `powerbi/Surfreport_Dashboard_v7.pbix`: arquivo do painel como fornecido pelo autor; o arquivo enviado contém as páginas *Tela Principal* e *Tela testes*. O autor informou que renomeou a segunda para *Tela Resultados*, mas a alteração ainda não está presente no PBIX fornecido.
-- `powerbi/forecast_base.pq`: consulta Power Query usada para transformar dados e combinar as regras. É a versão original, com caminho local a ser ajustado pelo usuário.
-- `powerbi/DIM_Ondas.pq`, `powerbi/DIM_Vento.pq`, `powerbi/DIM_Qualidade.pq`: tabelas de decisão empregadas no modelo.
-- `powerbi/referencia_ondulacao.dax`: coluna calculada do modelo de referência M1.
-- `powerbi/medidas_dax.md`: cinco medidas DAX de apresentação/consolidação do painel.
-- `documentacao/dicionario_dados.md`: descrição dos 16 campos da base observacional.
+Os arquivos do projeto estão disponibilizados diretamente na pasta principal do repositório.
+
+- `observacoes_surfreport_2026.csv`: base final de avaliação observacional, contendo 105 registros válidos coletados entre 08 e 17/11/2026 (separador `;`, codificação UTF-8 com BOM).
+- `surfreport_noaa.py`: script Python responsável pela aquisição de previsões da API Stormglass, utilizando a fonte NOAA para as variáveis meteorológicas e oceanográficas e consulta separada para os dados de maré. A chave de API foi substituída por um texto de configuração.
+- `Surfreport_Dashboard_v7.pbix`: arquivo do painel interativo desenvolvido no Power BI, com duas páginas destinadas à visualização das previsões e à apresentação dos resultados da avaliação dos modelos.
+- `forecast_base.pq`: consulta Power Query responsável pelo tratamento e pela padronização dos dados, além da integração das regras de classificação. O caminho local do CSV deve ser ajustado conforme o ambiente de execução.
+- `DIM_Ondas.pq`, `DIM_Vento.pq` e `DIM_Qualidade.pq`: tabelas de regras utilizadas para avaliação da ondulação, do vento e da qualidade final das condições de surfe.
+- `referencia_ondulacao.dax`: coluna calculada utilizada na classificação do modelo de referência (M1), baseado exclusivamente nas condições de ondulação.
+- `medidas_dax.md`: documentação das cinco medidas DAX utilizadas na consolidação e apresentação dos indicadores no painel.
+- `dicionario_dados.md`: descrição dos 16 campos da base de registros observacionais.
+
+Os arquivos permitem consultar a estrutura computacional do sistema e os dados utilizados na avaliação apresentada no Trabalho de Conclusão de Curso. Para executar o processamento e atualizar as previsões, é necessário configurar uma chave válida da API Stormglass e ajustar os caminhos locais dos arquivos.
 
 ## Resultado da avaliação observacional
 
