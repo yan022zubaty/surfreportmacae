@@ -2,6 +2,8 @@
 
 Repositório de apoio ao Trabalho de Conclusão de Curso **Modelagem e calibração de dados oceanográficos para classificação e avaliação das condições de surfe**. O sistema avalia previsões ambientais para a **Praia do Pecado** e a **Laje do Pecado**, com processamento em Python, regras no Power Query (linguagem M), medidas DAX e visualização no Microsoft Power BI.
 
+O painel Power BI apresenta a estrutura operacional do sistema e pode conter previsões referentes a datas não incluídas na avaliação observacional. Os resultados estatísticos apresentados no TCC foram calculados exclusivamente a partir dos 105 registros válidos documentados na base de avaliação.
+
 ## Organização
 
 - `dados/observacoes_surfreport_2026.csv`: base final de avaliação observacional (105 registros válidos; 08 a 17/11/2026; separador `;`, codificação UTF-8 com BOM).
