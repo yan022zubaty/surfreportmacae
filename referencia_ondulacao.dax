@@ -1,0 +1,10 @@
+referencia_ondulacao =
+SWITCH(
+    TRUE(),
+    'forecast_base'[qualidade_onda] = "Insuficiente", "Ruim",
+    'forecast_base'[qualidade_onda] = "Desfavorável", "Ruim",
+    'forecast_base'[qualidade_onda] = "Razoável", "Regular",
+    'forecast_base'[qualidade_onda] = "Favorável", "Regular para bom",
+    'forecast_base'[qualidade_onda] = "Muito favorável", "Bom",
+    BLANK()
+)
